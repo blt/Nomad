@@ -10,7 +10,7 @@ scalacOptions ++= Seq(
   "-deprecation", "-explaintypes", "-optimise"
 )
 
-publishTo := Some("troutwine.us repository" at "http://maven.troutwine.us/")
+publishTo := Some(Resolver.sftp("troutwine.us repository", "maven.troutwine.us", "/srv/http/us/troutwine/maven/"))
 
 credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
 
