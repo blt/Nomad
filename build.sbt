@@ -23,7 +23,4 @@ libraryDependencies ++= Seq(
   , "com.h2database" % "h2" % "1.3.155"
   // Testing
   , "org.scalatest" %% "scalatest" % "1.4.1"
-  // Kindly instruct Flyway to be silent. (Everyone has their own logging
-  // solution, including me. I, at least, have the decency not to _use_ it.)
-  , "org.slf4j" % "slf4j-log4j12" % "1.5.6"
 )
