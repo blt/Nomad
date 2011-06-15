@@ -3,8 +3,13 @@ import us.troutwine.nomad.types.Database
 import us.troutwine.nomad.configuration
 
 import java.util.Properties
+import java.util.logging.{LogManager,Level}
+import scala.collection.JavaConversions._
 
 package object schema {
+  private val manager = LogManager.getLogManager()
+  private val logs:Iterator[String] = manager.getLoggerNames()
+  logs.foreach( a => manager.getLogger(a).setLevel(Level.SEVERE) )
   import com.googlecode.flyway.core.Flyway
 
   private val props:Properties = {
